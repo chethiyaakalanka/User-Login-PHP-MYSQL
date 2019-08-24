@@ -22,7 +22,7 @@ session_start();
     <title>This is the home page</title>
 </head>
 <body>
-    <?php if(isset($_SESSION['success'])); ?>
+    <?php if(isset($_SESSION['success'])): ?>
         <div>
             <h3>
                 <?php
@@ -32,16 +32,16 @@ session_start();
             </h3>
         </div>
 <!-- -->
-<?php endif; ?>
+<?php endif ?>
 <!-- if user logged i print info about the account -->
 <?php
-    if(isset($_SESSION['username']));
+    if(isset($_SESSION['username'])):
 ?>
         <h3>Welcome <strong><?php echo $_SESSION['username'];?></strong></h3>
     <button>
         <a href="index.php?logout='1'"></a>
     </button>
 <!-- -->
-<?php endif; ?>
+<?php endif ?>
 </body>
 </html>
